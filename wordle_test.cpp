@@ -1,10 +1,11 @@
 #include <iostream>
 #include "wordle.hpp"
 
-using namespace ilrd;
+using namespace wordle;
 int main()
 {
-	Play play;
-	play.NewGame();
+	Wordle wordle;
+	wordle.NewGame();
+	wordle.Play();
 	return 0;
 }
