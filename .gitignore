@@ -1,0 +1,18 @@
+
+# this will exclude all the files
+# so we need to include the types that we want to upload (exclude them from this rule)
+*
+
+# we start with a '!', to negate the pattern
+# so this will exclude all the directory from the above rule, viz. to upload them
+!/**/
+
+
+!*.cpp
+!*.hpp
+!*.json
+
+# Specific files
+!.gitignore
+![mM]akefile
+![mM]akefile*
