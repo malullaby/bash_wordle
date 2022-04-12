@@ -13,6 +13,7 @@ namespace wordle
     class Wordle
     {
     public:
+        Wordle(std::string dict_path);
         void NewGame();
         void Play();
 

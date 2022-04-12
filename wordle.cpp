@@ -9,7 +9,12 @@
 
 using namespace wordle;
 
-void Wordle::NewGame()
+Wordle::Wordle(std::string dict_path) : m_dict(Dictionary(dict_path))
+{
+
+}
+
+    void Wordle::NewGame()
 {
     m_word = m_dict.GetRandomWord();
 }
@@ -53,7 +58,7 @@ void Wordle::Play()
         std::cout << std::endl;
     }
     m_board.Draw();
-    
+
     if (win)
     {
         std::cout << "You Win!" << std::endl;

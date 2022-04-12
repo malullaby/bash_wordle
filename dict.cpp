@@ -1,16 +1,15 @@
-#include <iostream>
 #include <unordered_set>
 #include <fstream>
 #include <algorithm>
 #include <cstdlib>
-#include <ctime>
+#include <ctime> // time
 #include "dict.hpp"
 
 using namespace wordle;
 
-Dictionary::Dictionary()
+Dictionary::Dictionary(std::string dict_location)
 {
-    std::ifstream is("/usr/share/dict/american-english");
+    std::ifstream is(dict_location);
     std::string str;
     while (getline(is, str))
     {

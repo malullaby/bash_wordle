@@ -8,7 +8,7 @@ namespace wordle
     class Dictionary
     {
     public:
-        Dictionary();
+        Dictionary(std::string dict_location);
         bool InDictionary(std::string word) const;
         std::string GetRandomWord() const;
 
