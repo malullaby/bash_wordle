@@ -3,7 +3,6 @@
 
 namespace wordle
 {
-
     struct Char
     {
         enum struct Color

@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> // cout
 #include "board.hpp"
 
 using namespace wordle;

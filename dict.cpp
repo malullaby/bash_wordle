@@ -1,8 +1,8 @@
 #include <unordered_set>
-#include <fstream>
-#include <algorithm>
-#include <cstdlib>
-#include <ctime> // time
+#include <fstream>   // ifstream
+#include <algorithm> // transform, all_of
+#include <cstdlib>   //rand
+#include <ctime>     // time
 #include "dict.hpp"
 
 using namespace wordle;

@@ -1,20 +1,14 @@
 #include "wordle.hpp"
-#include <iostream>
-#include <unordered_set>
-#include <fstream>
-#include <algorithm>
-#include <cstdlib>
-#include <ctime>
-#include <string>
+#include <iostream> //cout
+#include <algorithm> //trasform
 
 using namespace wordle;
 
 Wordle::Wordle(std::string dict_path) : m_dict(Dictionary(dict_path))
 {
-
 }
 
-    void Wordle::NewGame()
+void Wordle::NewGame()
 {
     m_word = m_dict.GetRandomWord();
 }

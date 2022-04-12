@@ -12,7 +12,6 @@ namespace wordle
         void Draw() const;
         std::array<Line, 6> m_lines;
     };
-
 }
 
 #endif
