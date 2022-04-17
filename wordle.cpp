@@ -16,7 +16,7 @@ void Wordle::NewGame()
 std::string Wordle::GetLine()
 {
     std::string str;
-    std::cin >> str;
+    std::getline(std::cin, str);
     return str;
 }
 
@@ -27,7 +27,7 @@ bool Wordle::HandleLine(int line)
     while (!IsGuessValid(userInput))
     {
         std::cout << "This is not a valid word. Enter a new one: ";
-        std::string userInput = GetLine();
+        userInput = GetLine();
     };
 
     std::cout << std::endl;
@@ -66,7 +66,6 @@ void Wordle::Play()
 
 bool Wordle::IsGuessValid(std::string &word) const
 {
-    std::cout << word << std::endl;
     std::transform(word.begin(), word.end(), word.begin(), ::toupper);
     return m_dict.InDictionary(word);
 }
