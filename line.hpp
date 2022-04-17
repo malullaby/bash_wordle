@@ -6,12 +6,12 @@
 
 namespace wordle
 {
-    struct Line
-    {
-        void Set(std::string user_input, std::string correct_word);
-        void Draw();
-        std::array<Char, 5> m_char_array;
-    };
-}
+struct Line
+{
+    void Set(std::string user_input, std::string correct_word);
+    void Draw();
+    std::array<Char, 5> m_char_array;
+};
+} // namespace wordle
 
 #endif

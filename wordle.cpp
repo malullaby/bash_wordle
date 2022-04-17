@@ -1,5 +1,5 @@
 #include "wordle.hpp"
-#include <iostream> //cout
+#include <iostream>  //cout
 #include <algorithm> //trasform
 
 using namespace wordle;
@@ -26,7 +26,8 @@ bool Wordle::HandleLine(int line)
     do
     {
         user_input = GetLine();
-        std::transform(user_input.begin(), user_input.end(), user_input.begin(), ::toupper);
+        std::transform(user_input.begin(), user_input.end(), user_input.begin(),
+                       ::toupper);
         std::cout << "This is not a valid word. Enter a new one: ";
     } while (!m_dict.InDictionary(user_input));
 

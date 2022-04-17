@@ -10,19 +10,19 @@
 
 namespace wordle
 {
-    class Wordle
-    {
-    public:
-        Wordle(std::string dict_path);
-        void NewGame();
-        void Play();
+class Wordle
+{
+public:
+    Wordle(std::string dict_path);
+    void NewGame();
+    void Play();
 
-    private:
-        std::string m_word;
-        Dictionary m_dict;
-        Board m_board;
-        std::string GetLine();
-        bool HandleLine(int line);
-    };
-}
+private:
+    std::string m_word;
+    Dictionary m_dict;
+    Board m_board;
+    std::string GetLine();
+    bool HandleLine(int line);
+};
+} // namespace wordle
 #endif

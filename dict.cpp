@@ -14,8 +14,8 @@ Dictionary::Dictionary(std::string dict_location)
     while (getline(is, str))
     {
         std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-        if (str.length() == 5 && std::all_of(str.begin(), str.end(), [](char c)
-                                             { return isalpha(c); }))
+        if (str.length() == 5 &&
+            std::all_of(str.begin(), str.end(), [](char c) { return isalpha(c); }))
         {
             m_set.insert(str);
         }

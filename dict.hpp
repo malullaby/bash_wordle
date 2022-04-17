@@ -5,17 +5,17 @@
 
 namespace wordle
 {
-    class Dictionary
-    {
-    public:
-        Dictionary(std::string dict_location);
-        bool InDictionary(std::string word) const;
-        std::string GetRandomWord() const;
+class Dictionary
+{
+public:
+    Dictionary(std::string dict_location);
+    bool InDictionary(std::string word) const;
+    std::string GetRandomWord() const;
 
-    private:
-        std::unordered_set<std::string> m_set;
-    };
-  
-}
+private:
+    std::unordered_set<std::string> m_set;
+};
+
+} // namespace wordle
 
 #endif
