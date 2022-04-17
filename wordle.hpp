@@ -23,6 +23,7 @@ private:
     Board m_board;
     std::string GetLine();
     bool HandleLine(int line);
+    bool IsGuessValid(std::string &word) const;
 };
 } // namespace wordle
 #endif
