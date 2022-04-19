@@ -3,8 +3,7 @@
 
 using namespace wordle;
 
-Char::Char(char character, Color color) : m_character(character),
-                                          m_color(color)
+Char::Char(char character, Color color) : m_character(character), m_color(color)
 {
 }
 

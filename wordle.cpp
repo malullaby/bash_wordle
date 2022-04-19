@@ -1,5 +1,5 @@
 #include "wordle.hpp"
-#include <iostream> //cout
+#include <iostream>  //cout
 #include <algorithm> //trasform
 
 using namespace wordle;
@@ -16,25 +16,25 @@ void Wordle::NewGame()
 std::string Wordle::GetLine()
 {
     std::string str;
-    std::cin >> str;
+    std::getline(std::cin, str);
     return str;
 }
 
 bool Wordle::HandleLine(int line)
 {
-    std::string user_input;
-    do
+    std::string userInput = GetLine();
+
+    while (!IsGuessValid(userInput))
     {
-        user_input = GetLine();
-        std::transform(user_input.begin(), user_input.end(), user_input.begin(), ::toupper);
         std::cout << "This is not a valid word. Enter a new one: ";
-    } while (!m_dict.InDictionary(user_input));
+        userInput = GetLine();
+    };
 
     std::cout << std::endl;
 
-    m_board.m_lines[line].Set(user_input, m_word);
+    m_board.m_lines[line].Set(userInput, m_word);
 
-    return user_input == m_word;
+    return userInput == m_word;
 }
 
 void Wordle::Play()
@@ -62,4 +62,10 @@ void Wordle::Play()
 
         std::cout << "Try Again!" << std::endl;
     }
+}
+
+bool Wordle::IsGuessValid(std::string &word) const
+{
+    std::transform(word.begin(), word.end(), word.begin(), ::toupper);
+    return m_dict.InDictionary(word);
 }

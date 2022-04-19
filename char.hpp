@@ -3,24 +3,24 @@
 
 namespace wordle
 {
-    struct Char
+struct Char
+{
+    enum struct Color
     {
-        enum struct Color
-        {
-            WHITE,
-            GREY,
-            YELLOW,
-            GREEN
-        };
-        Char(char character = '?', Color color = Color::WHITE);
-        void SetCharacter(char m_character);
-        void SetColor(Color color);
-        void Draw();
-
-    private:
-        char m_character;
-        Color m_color;
+        WHITE,
+        GREY,
+        YELLOW,
+        GREEN
     };
+    Char(char character = '?', Color color = Color::WHITE);
+    void SetCharacter(char m_character);
+    void SetColor(Color color);
+    void Draw();
 
-}
+private:
+    char m_character;
+    Color m_color;
+};
+
+} // namespace wordle
 #endif
